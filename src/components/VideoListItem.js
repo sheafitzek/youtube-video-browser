@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const VideoListItem = (props) => {
+export const VideoListItem = ({video, onVideoSelect}) => {
 	return (
-		<Li>
-		</Li>
+		<div className="list-group-item" onClick={() => onVideoSelect(video)}>
+		</div>
 	);
 };
 

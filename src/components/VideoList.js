@@ -2,9 +2,17 @@ import React from 'react';
 
 import VideoListItem from './VideoListItem';
 
-export const VideoList = (props) => {
+export const VideoList = ({videos, onVideoSelect}) => {
+	const VideoItems = videos.map((video) => {
+		return (
+			<VideoListItem
+				video={video}
+				onVideoSelect={onVideoSelect}
+			/>
+		);
+	});
 
-	return <ul></ul>;
+	return <ul className="col-md-4 list-group">{VideoItems}</ul>;
 };
 
 export default VideoList;
