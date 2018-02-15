@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
 export const VideoDetail = ({video}) => {
 	if (!video) {
 		return <div>Loading...</div>;
@@ -11,7 +13,7 @@ export const VideoDetail = ({video}) => {
 	const url = `https://www.youtube.com/embed/${videoId}`;
 
 	return (
-		<div className="video-detail col-md-8">
+		<Wrapper className="video-detail col-md-8">
 			<div className="embed-responsive embed-responsive-16by9">
 				<iframe
 					src={url}
@@ -24,8 +26,17 @@ export const VideoDetail = ({video}) => {
 				<div>{title}</div>
 				<div>{description}</div>
 			</div>
-		</div>
+		</Wrapper>
 	);
 };
 
 export default VideoDetail;
+
+const Wrapper = styled.div`
+	.details {
+		margin-top: 10px;
+		padding: 10px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+	}
+`;

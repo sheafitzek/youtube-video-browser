@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import styled from 'styled-components';
+
 export class SearchBar extends Component {
 	constructor(props) {
 		super(props);
@@ -8,14 +10,23 @@ export class SearchBar extends Component {
 	}
 	render() {
 		return (
-			<div className="search-bar">
+			<Wrapper className="search-bar">
 				<input
 					value={this.state.term}
 					onChange={(e) => this.setState({term: e.target.value})}
 				/>
-			</div>
+			</Wrapper>
 		);
 	}
 }
 
 export default SearchBar;
+
+const Wrapper = styled.div`
+	margin: 1.25rem;
+	text-align: center;
+
+	input {
+		width: 75%;
+	}
+`;
