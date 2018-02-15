@@ -6,6 +6,7 @@ export const VideoList = ({videos, onVideoSelect}) => {
 	const VideoItems = videos.map((video) => {
 		return (
 			<VideoListItem
+				key={video.etag}
 				video={video}
 				onVideoSelect={onVideoSelect}
 			/>
