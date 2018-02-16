@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
 import VideoListItem from './VideoListItem';
 
 export const VideoList = ({videos, onVideoSelect}) => {
@@ -13,7 +15,13 @@ export const VideoList = ({videos, onVideoSelect}) => {
 		);
 	});
 
-	return <ul className="col-md-4 list-group">{VideoItems}</ul>;
+	return (
+		<Ul className="col-md-4 list-group">
+			{VideoItems}
+		</Ul>
+	);
 };
 
 export default VideoList;
+
+const Ul = styled.ul`@media (max-width: 768px) {padding-left: 0.9375rem;}`;

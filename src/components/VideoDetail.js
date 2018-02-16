@@ -17,14 +17,15 @@ export const VideoDetail = ({video}) => {
 			<div className="embed-responsive embed-responsive-16by9">
 				<iframe
 					src={url}
+					title={title}
 					frameBorder="0"
 					className="embed-responsive-item"
 					allowFullScreen
 				/>
 			</div>
 			<div className="details">
-				<div>{title}</div>
-				<div>{description}</div>
+				<div className="video-title">{title}</div>
+				<div className="video-description">{description}</div>
 			</div>
 		</Wrapper>
 	);
@@ -38,5 +39,10 @@ const Wrapper = styled.div`
 		padding: 10px;
 		border: 1px solid #ddd;
 		border-radius: 4px;
+
+		.video-title {
+			font-size: 1.25rem;
+			font-weight: bold;
+		}
 	}
 `;

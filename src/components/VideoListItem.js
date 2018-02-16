@@ -8,9 +8,13 @@ export const VideoListItem = ({video, onVideoSelect}) => {
 
 	return (
 		<Li className="list-group-item" onClick={() => onVideoSelect(video)}>
-			<div video-list media>
+			<div className="video-list media">
 				<div className="media-left">
-					<img className="media-object" src={imageUrl} />
+					<img
+						className="media-object"
+						src={imageUrl}
+						alt="thumbnail"
+					/>
 				</div>
 				<div className="media-body">
 					<div className="media-heading">{title}</div>
