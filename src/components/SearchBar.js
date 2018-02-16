@@ -10,6 +10,12 @@ export class SearchBar extends Component {
 
 		this.state = {term: ``};
 	}
+
+	onInputChange(term) {
+		this.setState({term});
+		this.props.onSearchTermChange(term);
+	}
+
 	render() {
 		return (
 			<Wrapper className="search-bar">
@@ -17,7 +23,7 @@ export class SearchBar extends Component {
 				<input
 					placeholder="Search YouTube"
 					value={this.state.term}
-					onChange={(e) => this.setState({term: e.target.value})}
+					onChange={(e) => this.onInputChange(e.target.value)}
 				/>
 				<img src={logo} alt="logo" />
 			</Wrapper>
@@ -29,6 +35,7 @@ export default SearchBar;
 
 const Wrapper = styled.div`
 	margin: 1.25rem;
+	margin-top: 2.5rem;
 	text-align: center;
 
 	i {
@@ -39,6 +46,7 @@ const Wrapper = styled.div`
 
 	input {
 		width: 75%;
+		padding-left: 0.25rem;
 
 		&:before {
 			content: "\f072";
