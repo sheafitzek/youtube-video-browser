@@ -9,7 +9,9 @@ export class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {term: ``};
+		const storedTerm = localStorage.getItem(`youtube-video-browser-term`);
+
+		this.state = {term: storedTerm || ``};
 	}
 
 	onInputChange(term) {
@@ -24,6 +26,7 @@ export class SearchBar extends Component {
 				<input
 					placeholder="Search YouTube"
 					value={this.state.term}
+					onClick={(e) => e.target.select()}
 					onChange={(e) => this.onInputChange(e.target.value)}
 				/>
 				<img src={logo} alt="logo" />
