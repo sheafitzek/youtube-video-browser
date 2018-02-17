@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types-defined';
 
 import styled from 'styled-components';
 
@@ -29,6 +30,10 @@ export const VideoDetail = ({video}) => {
 			</div>
 		</Wrapper>
 	);
+};
+
+VideoDetail.propTypes = {
+	video : PropTypes.object.isDefined,
 };
 
 export default VideoDetail;

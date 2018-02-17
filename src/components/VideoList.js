@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types-defined';
 
 import styled from 'styled-components';
 
@@ -15,11 +16,12 @@ export const VideoList = ({videos, onVideoSelect}) => {
 		);
 	});
 
-	return (
-		<Ul className="col-md-4 list-group">
-			{VideoItems}
-		</Ul>
-	);
+	return <Ul className="col-md-4 list-group">{VideoItems}</Ul>;
+};
+
+VideoList.propTypes = {
+	onVideoSelect : PropTypes.func.isRequired,
+	videos        : PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default VideoList;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types-defined';
 
 import styled from 'styled-components';
 
@@ -22,6 +23,11 @@ export const VideoListItem = ({video, onVideoSelect}) => {
 			</div>
 		</Li>
 	);
+};
+
+VideoListItem.propTypes = {
+	video         : PropTypes.object.isDefined,
+	onVideoSelect : PropTypes.func.isRequired,
 };
 
 export default VideoListItem;
