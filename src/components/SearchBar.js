@@ -42,14 +42,14 @@ SearchBar.propTypes = {
 export default SearchBar;
 
 const Wrapper = styled.div`
-	margin: 1.25rem;
-	margin-top: 2.5rem;
+	margin: 2.5rem;
 	text-align: center;
 
 	i {
-		height: 2.5rem;
-		color: #df4309;
+		font-size: 1.5rem;
+		color: #e04006;
 		margin-right: 0.5rem;
+		vertical-align: top;
 	}
 
 	input {

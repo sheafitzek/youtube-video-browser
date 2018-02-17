@@ -41,12 +41,25 @@ export default VideoListItem;
 
 const Li = styled.li`
 	cursor: pointer;
+	border: 1px solid #aaa;
+
+	&:nth-child(even) {
+		background-color: whitesmoke;
+	}
 
 	&:hover {
-		background-color: #eee;
+		background-color: rgba(255, 197, 197, 0.5);
 	}
 
 	img {
 		max-width: 4rem;
+	}
+
+	i {
+		position: absolute;
+		right: 1.25rem;
+		bottom: .75rem;
+		font-size: 1.5rem;
+		color: rgba(224, 64, 6, 0.5);
 	}
 `;

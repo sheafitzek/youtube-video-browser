@@ -42,10 +42,12 @@ const Wrapper = styled.div`
 	.details {
 		margin-top: 10px;
 		padding: 10px;
-		border: 1px solid #ddd;
+		background-color: whitesmoke;
+		border: 1px solid #aaa;
 		border-radius: 4px;
 
 		.video-title {
+			color: #e04006;
 			font-size: 1.25rem;
 			font-weight: bold;
 		}
