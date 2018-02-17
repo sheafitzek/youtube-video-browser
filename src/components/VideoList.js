@@ -5,13 +5,14 @@ import styled from 'styled-components';
 
 import VideoListItem from './VideoListItem';
 
-export const VideoList = ({videos, onVideoSelect}) => {
+export const VideoList = ({videos, onVideoSelect, selectedVideo}) => {
 	const VideoItems = videos.map((video) => {
 		return (
 			<VideoListItem
 				key={video.etag}
 				video={video}
 				onVideoSelect={onVideoSelect}
+				selectedVideo={selectedVideo}
 			/>
 		);
 	});
@@ -22,6 +23,7 @@ export const VideoList = ({videos, onVideoSelect}) => {
 VideoList.propTypes = {
 	onVideoSelect : PropTypes.func.isRequired,
 	videos        : PropTypes.arrayOf(PropTypes.object).isRequired,
+	selectedVideo : PropTypes.object.isDefined,
 };
 
 export default VideoList;

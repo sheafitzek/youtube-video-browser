@@ -21,7 +21,7 @@ export class App extends Component {
 
 		const storedTerm = localStorage.getItem(`youtube-video-browser-term`);
 
-		this.videoSearch(storedTerm ? storedTerm : `texas`);
+		this.videoSearch(storedTerm ? storedTerm : ``);
 	}
 
 	videoSearch(term) {
@@ -47,6 +47,7 @@ export class App extends Component {
 					onVideoSelect={(selectedVideo) =>
 						this.setState({selectedVideo})}
 					videos={this.state.videos}
+					selectedVideo={this.state.selectedVideo}
 				/>
 			</div>
 		);
